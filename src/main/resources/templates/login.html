@@ -11,11 +11,7 @@
     <form class="mx-auto w-25 bg-blur"
           th:method="POST"
           th:action="@{/login}"
-          th:object="${loginData}"
-    >
-
-        <!--    Example: Render errors messages with fields.errors - you can make it differently. -->
-        <!--    <div th:each="error: ${#fields.errors()}" th:text="${error}" class="text-danger">Error messages</div>-->
+          th:object="${loginData}">
 
         <div th:if="${loginData.getUsername()}" class="text-danger">Username length must be between 3 and 20 characters!</div>
         <div th:if="${loginData.getPassword()}" class="text-danger">Password length must be between 3 and 20 characters!</div>
